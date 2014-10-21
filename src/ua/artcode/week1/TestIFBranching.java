@@ -1,3 +1,4 @@
+package ua.artcode.week1;
 /**
  * Created by admin on 15.10.2014.
  */
