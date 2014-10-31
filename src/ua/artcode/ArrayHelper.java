@@ -39,4 +39,21 @@ public class ArrayHelper {
 		return count;
 	}
 	
+	public static void bubbleSort(int[] mas){
+		for(int i = 0; i < mas.length; i++){
+			// move max element to end
+			for(int j = 0; j < mas.length - 1 - i; j++){
+				if(mas[j] > mas[j+1]){
+					swap(mas, j, j+1);
+				}
+			}
+		}
+	}
+	
+	public static void swap(int[] mas, int a, int b){
+		int temp = mas[a];
+		mas[a] = mas[b];
+		mas[b] = temp;
+	}
+	
 }
