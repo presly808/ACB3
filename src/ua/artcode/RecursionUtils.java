@@ -18,10 +18,29 @@ public class RecursionUtils {
 			return word.charAt(0)+"";
 		}
 
-		char last = word.charAt(word.length()-1);
+		int index = word.length() - 1;
 
-		return last + reverse(word.substring(0, word.length()));
+		char last = word.charAt(index);
 
+		String returnedPart = reverse(word.substring(0, index));
+
+		return last + returnedPart;
+
+
+	}
+
+	public static int count7(int val){
+		return val == 0 ? 0 : ((val % 10 == 7) ? 1 : 0) + count7(val / 10);
+	}
+
+	public static int countTrace7(int val){
+		if(val == 0){
+			return 0;
+		}
+
+		int methodRes = (val % 10 == 7 ? 1 : 0);
+		int returnedResult = count7(val / 10);
+		return methodRes + returnedResult;
 
 	}
 	
